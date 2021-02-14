@@ -17,17 +17,14 @@ def chooseSimilarityMethod():
     return None
 
 def chooseCalculationMethod():
-    print("Choose the calculation method\n")
+    print("Choose the calculation method")
     print("For Simple Average, press 1")
     print("For Weighted Average, press 2")
-    print("For Hybrid Prediction, press 3")
     choice = int(input("Enter your choice: "))
     if choice == 1:
         return "Simple Average"
     elif choice == 2:
         return "Weighted Average"
-    elif choice == 3:
-        return "Hybrid Prediction"
     return None
 
 def choose_matrix_elements():

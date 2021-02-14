@@ -1,6 +1,6 @@
 import numpy as np
-from Calculation_Score import Simple_Average, Weighted_Average, Hybrid_Prediction
-from Scores_matrix import create_matrix, calculate_scores_for_prediction
+from Calculation_Score import Simple_Average, Weighted_Average
+from Scores_matrix_creation import create_matrix, calculate_scores_for_prediction
 from Similarities import Jaccard_Similarity, Dice_Similarity, Cosine_Similarity, Adjusted_Cosine_Similarity
 
 # calculate the similarity of 2 columns based on a certain similarity method(e.g Dice, Cosine, ..)
@@ -33,8 +33,6 @@ def predict_score_in_place(n_row, n_col, score_matrix, method_prediction, method
         return Simple_Average(score_matrix, similarities, n_row, k)
     elif method_calculation == 'Weighted Average':
         return Weighted_Average(score_matrix, similarities, n_row, k)
-    elif method_calculation == 'Hybrid Prediction':
-        return Hybrid_Prediction(score_matrix, similarities, n_row, k)
 
 # this function predicts the scores in the scores matrix filled with a certain percent of values, using a certain method
 # of calculation (such as simple average, weighted average or hybrid prediction), a certain method of prediction

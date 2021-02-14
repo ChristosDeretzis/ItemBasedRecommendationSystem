@@ -79,13 +79,5 @@ def Weighted_Average(score_predict, similarity_matrix, row, k):
     else:
         return 10 - score
 
-
-# This method is an extra prediction function for calculating the score in a matrix. It calculates the average value between
-# Simple and Weighted Average
-def Hybrid_Prediction(score_predict, similarity_matrix, row, k):
-    simple_average = Simple_Average(score_predict, similarity_matrix, row, k);
-    weighted_average = Weighted_Average(score_predict, similarity_matrix, row, k)
-    return (simple_average + weighted_average)/2
-
 if __name__ == '__main__':
     pass
